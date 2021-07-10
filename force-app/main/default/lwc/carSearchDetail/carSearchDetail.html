@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="Matching Cars">
+        <div class="slds-box slds-p-around_none slds-m-top_x-small slds-m-bottom_medium slds-m-horizontal_none">
+            <lightning-layout multiple-rows class="slds-align_absolute-center">
+                <template if:true={carFound}>
+                    <template for:each={cars} for:item="car">
+                        <lightning-layout-item size="12" padding="around-small" key={car.Id} small-device-size="6"
+                        large-device-size="3" medium-device-size="4">
+                            <div class="custom-box slds-box slds-p-around_medium slds-text-align_center">
+                                    <p><img src={car.Picture__c} /></p>
+                                    <p>{car.Name}</p>
+                                    <c-car-search-detail-child car-id={car.Id}></c-car-search-detail-child>
+                            </div>
+                        </lightning-layout-item>
+                    </template>
+                </template>
+            </lightning-layout>
+        </div>
+
+        <!-- <lightning-button label="test" onclick={clickHandler}></lightning-button> -->
+    </lightning-card>
+
+</template>

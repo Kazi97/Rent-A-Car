@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Car Details Tab">
+            <div>
+                <lightning-tabset variant="scoped" active-tab-value={selectedTabValue}>
+
+                    <lightning-tab label="Add Car Experience" value="addexperience" onactive={tabChangeHandler}>
+                        <c-car-add-experience car-record-id={car} onexperienceadded={experienceAddHandler}></c-car-add-experience>
+                    </lightning-tab>
+
+                    <lightning-tab label="Car Details" value="cardetailstab" onactive={tabChangeHandler}>
+                        <c-car-detail-tab car-record-id={car}></c-car-detail-tab>
+                    </lightning-tab>
+    
+                    <lightning-tab label="View Experience" value="viewexperience" onactive={tabChangeHandler}>
+                        <c-car-view-experience car-record-id={car}></c-car-view-experience>
+                    </lightning-tab>
+                    
+                </lightning-tabset>
+            </div>
+    </lightning-card>
+    <!-- <lightning-button label='TestCarDetail' onclick={clickHandler}></lightning-button> -->
+</template>

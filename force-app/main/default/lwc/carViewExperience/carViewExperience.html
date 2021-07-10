@@ -1,0 +1,26 @@
+<template>
+    <!-- <lightning-button label="View Experience" onclick={viewExperienceHandler}></lightning-button> -->
+    <template if:true={ExpData}>
+        <template for:each={carExpRecord} for:item="item">
+            <lightning-layout key={item.id} class="slds-var-p-around_small">
+                <lightning-layout-item size=3 class="slds-var-p-around_small">
+                    <lightning-icon icon-name="standard:avatar_loading"></lightning-icon>
+                </lightning-layout-item>
+                <lightning-layout-item size=9 padding="slds-p-around_medium">
+                    <div class="slds-var-p-around_small">
+                        <p><strong>Owner Name: </strong>{item.CreatedBy.Name}</p>
+                        <p><strong>Company: </strong>{item.CreatedBy.CompanyName}</p>
+                    </div>
+                    <div class="slds-var-p-around_small">
+                        <p><strong>Car Name: </strong>{item.Car__r.Name}</p>
+                    </div>
+                    <div class="slds-var-p-around_small">
+                        <p><strong>{item.Name}</strong></p>
+                        <p>{item.Experience__c}</p>
+                    </div>
+                </lightning-layout-item>
+            </lightning-layout>
+        </template>
+    </template>
+    <!-- <lightning-button label="test" onclick={clickHandler}></lightning-button> -->
+</template>

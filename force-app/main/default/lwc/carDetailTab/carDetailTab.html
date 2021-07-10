@@ -1,0 +1,17 @@
+<template>
+    <article class="slds-card">
+        <div class="slds-card__header slds-grid">
+            <div class="slds">
+                <p><strong>{carName}</strong></p>
+                <img src={carPicture} />
+                <p><strong>Owner Name : </strong>{carOwner}</p>
+                <p><strong>Available for rent : </strong>{rentAvailablity}</p>
+            </div>
+            <div class="slds-no-flex">
+                <button class="slds-button slds-button_neutral right"
+                    onclick={clickHandler}>Full
+                    Details</button>
+            </div>
+        </div>
+    </article>
+</template>

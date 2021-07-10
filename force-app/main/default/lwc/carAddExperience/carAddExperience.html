@@ -1,0 +1,15 @@
+<template>
+        <h1>Add Your Experience!!!</h1>
+        <p><lightning-input type="text" onchange={titleHandler} placeholder="Enter Title"></lightning-input></p>
+</br>
+        <!-- <p><lightning-input-rich-text placeholder="Enter your review" onchange={reviewHandler}></lightning-input-rich-text></p> -->
+
+        <div class="slds-form-element">
+                <div class="slds-form-element__control">
+                        <textarea placeholder="Enter your review" class="slds-textarea" onchange={reviewHandler}></textarea>
+                </div>
+        </div>
+</br>
+        <p><lightning-button type="Brand" label="Submit your review" onclick={reviewSubmitHandler}></lightning-button></p>
+
+</template>
